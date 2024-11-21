@@ -2,7 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
-import authRouter from './routes/auth.route.js';  // Corrected import
+import authRouter from './routes/auth.route.js';
+import listingRouter from './routes/listing.route.js';  // Corrected import
 import cookieParser from 'cookie-parser';
 dotenv.config();
 
@@ -25,7 +26,7 @@ app.listen(3000, () => {
 
 app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);  // This is fine
-
+app.use('/api/listing', listingRouter);
 
 
 app.use((err,req,res,next)=>{
