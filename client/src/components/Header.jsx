@@ -26,10 +26,9 @@ export default function Header() {
     <header className='bg-slate-200 shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link to='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-slate-500'>Un</span>
-            <span className='text-slate-700'>Estate</span>
-          </h1>
+        <h1 className='flex items-center'>
+          <img src="/logo/logo.png" alt="Havuray Logo" className="w-auto h-10 sm:h-16" />
+        </h1>
         </Link>
         <form
           onSubmit={handleSubmit}
